@@ -1,0 +1,57 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{%block cl1 %}current{% endblock %}
+{% block title%}Главная{% endblock %}
+{% block css%}{% static 'main/css/main.css' %}{% endblock %}
+{% block js%}{% static 'main/js/main.js' %}{% endblock %}
+{% block paralac %}
+
+    <header class="main-header">
+        <div class="layers">
+            <div class="layer_header">
+
+                <div class="layers_caption">Учебно-научный центр</br>планетарий</div>
+                <div class="layers_title" style="font-size: 22px;"> Погружение в мир звезд</div>
+                <a href="{% url 'write' %}"><button>ЗАПИСАТЬСЯ</button></a>
+            </div>
+            <div class="layer layers_base" style="background-image: url({% static 'main/img/bottom.png' %});"></div>
+            <div class="layer layers_middle" style="background-image: url({% static 'main/img/title.png' %});"> </div>
+            <div class="layer layers_front" style="background-image: url({% static 'main/img/top.png' %});"> </div>
+            </div>
+    </header>
+{% endblock %}
+{% block content %}
+
+    <article class="main-article">
+        <div class="main-article_content">
+            <h2 class="main-article_header">ИНФОРМАЦИЯ О НАС</h2>
+            <p>Планетарий СГУГиТ - это уникальное образовательное и исследовательское пространство.
+            Он является структурным подразделением Сибирского Государственного Университета Геосистем и Технологии (СГУГиТ)
+            и предлагает широкий спектр образовательных программ.</p>
+            <p>В планетарии проводятся лекции, экскурсии, наблюдения за небесными телами, а также различные мероприятия,
+                 направленные на популяризацию астрономии и космических исследований среди детей, подростков и взрослых.</p>
+            <p>Оборудование планетария позволяет демонстрировать звездное небо, солнечную систему и различные
+                 космические явления в высоком качестве, создавая эффект полного погружения. Благодаря этому, посетители могут
+                  лучше понять красоту и величие вселенной, а также получить знания о законах природы и современных научных
+                   открытиях в области астрономии.</p>
+            <p>Новосибирский планетарий активно сотрудничает с образовательными учреждениями, общественными организациями
+                 и средствами массовой информации, проводя совместные мероприятия и реализуя образовательные проекты.
+                  Он также участвует в научных исследованиях и разработках в области астрономических наблюдений и
+                   космического мониторинга.</p>
+            <p>Приглашаем всех желающих посетить наш планетарий и прикоснуться к тайнам вселенной!</p>     
+        </div>
+
+    </article>
+
+<div class="map" >
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d73254.17245045825!2d82.71214769726564!3d54.987251999999984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dfe6cc8bc2909b%3A0xec10c2fd90c04c3a!2z0J_Qu9Cw0L3QtdGC0LDRgNC40Lk!5e0!3m2!1sru!2sru!4v1715086378448!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   <div class="contact">
+        <h1>Контакты</h1>
+        <label>7 (383) 343-29-44</br></label>
+        <label>planetarium@ssga.ru</br></label>
+        <label>630108, г. Новосибирск, ул. Пархоменко, 9</label>
+   </div>
+</div>
+{% endblock %}
+
+

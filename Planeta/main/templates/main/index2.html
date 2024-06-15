@@ -1,0 +1,23 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{%block cl2 %}current{% endblock %}
+{% block title%}Галерея{% endblock %}
+{% block css%}{% static 'gallery/css/gallery.css' %}{% endblock %}
+{% block js%}{% static 'gallery/js/gallery.js' %}{% endblock %}
+{% block content %}
+
+ <div class="heading">
+  <h3>Звездная Галерея СГУГиТ: Откройте для себя красоту ночного небосклона в нашем планетарии</h3>
+</div>
+
+  <div class="gallery">
+      {% for el in gallery %}
+        <img src="{{ el.img.url }}" alt="{{el.title}}"  class="gallery-img" onclick="showImage(src)">
+      {% endfor %}
+  </div>
+
+    <div class="image-popup-container" id="imagePopup">
+      <span class="close-button" onclick="closeImage()">×</span>
+      <img src="" alt="Popup Image" id="popupImage">
+    </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{%block cl3 %}current{% endblock %}
+{% block title%}Новости{% endblock %}
+{% block css%}{% static 'news/css/news.css' %}{% endblock %}
+{% block content %}
+  <div class="heading">
+    <h3>Новости Планетария СГУГиТ: Узнайте о последних событиях, лекциях и специальных мероприятиях в нашем звездном центре!</h3>
+  </div>
+
+<div class="features">
+        {% for el in new %}
+            <div class="alert alert-warning">
+               <div class="top"> <h3>{{ el.title }}</h3></div>
+                <p>{{ el.full_text }}</p>
+            </div>
+        {% endfor %}
+</div>
+
+{% endblock %}
+  
